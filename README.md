@@ -33,4 +33,55 @@ python manage.py createsuperuser
 g)
 Run the appliation:
 python manage.py runserver
+
+h)
+Access in your browser 'localhost:8000/polls/'
+(it will be necessary to create some polls and choices...) 
+```
+
+## WorkFlow:
+
+Before to use the application, is necessary create some records in DB:
+
+```
+a) Acessing the interactive shell of python:
+
+python manage.py shell
+
+
+b) Create some Questions:
+
+>>> from polls.models import Question
+
+>>> from django.utils import timezone
+>>> q = Question(question_text="What's up?", pub_date=timezone.now())
+>>> q.save()
+
+>>> Question.objects.all()
+<QuerySet [<Question: What's up?>]>
+
+
+c) Create some Choices:
+
+>>> from polls.models import Choice
+
+# Get de Question created ...
+>>> q = Question.objects.get(pk=1)
+
+# Create Choice 1:
+>>> q.choice_set.create(choice_text='Not much', votes=0)
+<Choice: Not much>
+
+# Create Choice 2:
+>>> q.choice_set.create(choice_text='The sky', votes=0)
+<Choice: The sky>
+
+>>> exit()
+
+d)
+Run the appliation:
+python manage.py runserver
+
+e)
+Access in your browser 'localhost:8000/polls/' or '127.0.0.1:8000/polls/'
 ```
