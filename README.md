@@ -35,10 +35,14 @@ Follow the all instructions in the WORKFLOW item, to
 add 'polls' and 'choices' in BD
 
 h)
+Run the tests to make sure the integrity of application:
+python manage.py test polls
+
+i)
 Run the appliation:
 python manage.py runserver
 
-i)
+j)
 Access in your browser 'localhost:8000/polls/' or '127.0.0.1:8000/polls/'
 ```
 
