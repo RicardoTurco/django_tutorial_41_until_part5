@@ -31,12 +31,15 @@ Create a "superuser" to access django-admin:
 python manage.py createsuperuser
 
 g)
+Follow the all instructions in the WORKFLOW item, to
+add 'polls' and 'choices' in BD
+
+h)
 Run the appliation:
 python manage.py runserver
 
-h)
-Access in your browser 'localhost:8000/polls/'
-(it will be necessary to create some polls and choices...) 
+i)
+Access in your browser 'localhost:8000/polls/' or '127.0.0.1:8000/polls/'
 ```
 
 ## WorkFlow:
@@ -77,11 +80,4 @@ c) Create some Choices:
 <Choice: The sky>
 
 >>> exit()
-
-d)
-Run the appliation:
-python manage.py runserver
-
-e)
-Access in your browser 'localhost:8000/polls/' or '127.0.0.1:8000/polls/'
 ```
